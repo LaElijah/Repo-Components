@@ -1,10 +1,11 @@
 {
   "name": "repo-components",
-  "version": "0.0.8",
+  "version": "0.0.11",
   "description": "Repo Components is a repository of modularized components that I have generated over the course of my web development history. for me to reuse and for you to hopefully find some use in!",
   "scripts": {
     "test": "jest",
-    "rollup:build": "rollup -c"
+    "watch": "parcel watch",
+    "build": "parcel build"
   },
   "repository": {
     "type": "git",
@@ -24,34 +25,26 @@
   },
   "homepage": "https://github.com/LaElijah/Repo-Components#readme",
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^25.0.5",
-    "@rollup/plugin-node-resolve": "^15.2.2",
-    "@rollup/plugin-terser": "^0.4.4",
-    "@rollup/plugin-typescript": "^11.1.5",
+    "@parcel/packager-ts": "^2.9.3",
+    "@parcel/transformer-sass": "^2.9.3",
+    "@parcel/transformer-typescript-types": "^2.9.3",
     "@types/react": "^18.2.25",
-    "autoprefixer": "^10.4.16",
     "jest": "^29.7.0",
+    "parcel": "^2.9.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "rollup": "^4.0.2",
-    "rollup-plugin-dts": "^6.1.0",
-    "rollup-plugin-peer-deps-external": "^2.2.4",
-    "rollup-plugin-postcss": "^4.0.2",
-    "rollup-plugin-scss": "^3.0.0",
-    "sass": "^1.69.0",
-    "scss": "^0.2.4",
     "tslib": "^2.6.2",
     "typescript": "^5.2.2"
   },
   "peerDependencies": {
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "scss": "^0.2.4"
+    "react-dom": "^18.2.0"
   },
-  "main": "dist/cjs/index.js",
-  "module": "dist/esm/index.js",
   "files": [
     "dist"
   ],
-  "types": "dist/index.d.ts"
+  "source": "src/index.ts",
+  "main": "dist/main.js",
+  "module": "dist/module.js",
+  "types": "dist/types.d.ts"
 }
